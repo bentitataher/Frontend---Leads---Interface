@@ -7,6 +7,7 @@ import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/leads/authentication/login/login.component';
+import { PasswordForgetComponent } from './views/leads/authentication/password-forget/password-forget.component';
 import { RegistrationComponent } from './views/leads/authentication/registration/registration.component';
 import { RegisterComponent } from './views/register/register.component';
 
@@ -50,6 +51,10 @@ export const routes: Routes = [
   {
     path: 'registration',
     component: RegistrationComponent
+  },
+  {
+    path: 'forget-password',
+    component: PasswordForgetComponent
   },
 
   {
