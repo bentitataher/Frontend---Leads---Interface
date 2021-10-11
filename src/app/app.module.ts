@@ -33,6 +33,8 @@ import { RegistrationComponent } from './views/leads/authentication/registration
 import { PasswordForgetComponent } from './views/leads/authentication/password-forget/password-forget.component';
 import { PasswordResetComponent } from './views/leads/authentication/password-reset/password-reset.component';
 
+// My importations
+import { ReactiveFormsModule } from '@angular/forms'
 @NgModule({
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { PasswordResetComponent } from './views/leads/authentication/password-re
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
-    ToasterModule
+    ToasterModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,

@@ -9,10 +9,11 @@ export class RegistrationComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  Inscription(){
+  
+
+  Inscription() {
     console.log(('test bouton envoyer ok !'));
   }
 
