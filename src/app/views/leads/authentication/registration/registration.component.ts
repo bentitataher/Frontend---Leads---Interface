@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms'
 
 @Component({
   selector: 'app-registration',
@@ -11,10 +12,15 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  
+  inscriptionForm = new FormGroup({
+    nom : new FormControl(''),
+    prenom : new FormControl(''),
+    email : new FormControl(''),
+    password : new FormControl('')
+  });
 
   Inscription() {
-    console.log(('test bouton envoyer ok !'));
+    console.log(this.inscriptionForm.value);
   }
 
 }
