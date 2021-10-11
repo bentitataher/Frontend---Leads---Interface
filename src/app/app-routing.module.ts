@@ -6,8 +6,11 @@ import { DefaultLayoutComponent } from './containers';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
-import { LoginComponent } from './views/login/login.component';
+import { LoginComponent } from './views/leads/authentication/login/login.component';
+import { RegistrationComponent } from './views/leads/authentication/registration/registration.component';
 import { RegisterComponent } from './views/register/register.component';
+
+// Projet leads connect
 
 export const routes: Routes = [
   {
@@ -43,6 +46,12 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
+
+  {
+    path: 'registration',
+    component: RegistrationComponent
+  },
+
   {
     path: '',
     component: DefaultLayoutComponent,

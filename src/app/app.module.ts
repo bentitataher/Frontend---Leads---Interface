@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
-import { LoginComponent } from './views/login/login.component';
+import { LoginComponent } from './views/leads/authentication/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
 import {
@@ -29,6 +29,9 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { ToasterModule, ToasterService } from 'angular2-toaster';
+import { RegistrationComponent } from './views/leads/authentication/registration/registration.component';
+import { PasswordForgetComponent } from './views/leads/authentication/password-forget/password-forget.component';
+import { PasswordResetComponent } from './views/leads/authentication/password-reset/password-reset.component';
 
 @NgModule({
   imports: [
@@ -52,7 +55,10 @@ import { ToasterModule, ToasterService } from 'angular2-toaster';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegistrationComponent,
+    PasswordForgetComponent,
+    PasswordResetComponent,
   ],
   providers: [{
     provide: LocationStrategy,
