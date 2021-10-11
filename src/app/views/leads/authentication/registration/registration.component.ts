@@ -12,4 +12,8 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Inscription(){
+    console.log(('test bouton envoyer ok !'));
+  }
+
 }
