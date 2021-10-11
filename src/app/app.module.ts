@@ -35,6 +35,8 @@ import { PasswordResetComponent } from './views/leads/authentication/password-re
 
 // My importations
 import { ReactiveFormsModule } from '@angular/forms'
+import { AuthenticationService } from './authentication.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     TabsModule.forRoot(),
     ChartsModule,
     ToasterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -65,9 +68,10 @@ import { ReactiveFormsModule } from '@angular/forms'
   ],
   providers: [{
     provide: LocationStrategy,
-    useClass: HashLocationStrategy
+    useClass: HashLocationStrategy,
   },
-  ToasterService
+  ToasterService,
+  AuthenticationService
 ],
   bootstrap: [ AppComponent ]
 })
