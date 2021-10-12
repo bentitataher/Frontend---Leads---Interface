@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+// Mes importations
+import { AuthGuard } from './auth.guard';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
@@ -66,59 +68,73 @@ export const routes: Routes = [
     children: [
       {
         path: 'base',
-        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'buttons',
-        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'charts',
-        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'dashboard',
-        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'editors',
-        loadChildren: () => import('./views/editors/editors.module').then(m => m.EditorsModule)
+        loadChildren: () => import('./views/editors/editors.module').then(m => m.EditorsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'forms',
-        loadChildren: () => import('./views/forms/forms.module').then(m => m.FormsModule)
+        loadChildren: () => import('./views/forms/forms.module').then(m => m.FormsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'google-maps',
-        loadChildren: () => import('./views/google-maps/google-maps.module').then(m => m.GoogleMapsModule)
+        loadChildren: () => import('./views/google-maps/google-maps.module').then(m => m.GoogleMapsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'icons',
-        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
+        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'notifications',
-        loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
+        loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'plugins',
-        loadChildren: () => import('./views/plugins/plugins.module').then(m => m.PluginsModule)
+        loadChildren: () => import('./views/plugins/plugins.module').then(m => m.PluginsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'tables',
-        loadChildren: () => import('./views/tables/tables.module').then(m => m.TablesModule)
+        loadChildren: () => import('./views/tables/tables.module').then(m => m.TablesModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'theme',
-        loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule)
+        loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'apps',
-        loadChildren: () => import('./views/apps/apps.module').then(m => m.AppsModule)
+        loadChildren: () => import('./views/apps/apps.module').then(m => m.AppsModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'widgets',
-        loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
+        loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule),
+        canActivate: [AuthGuard]
       }
     ]
   },
