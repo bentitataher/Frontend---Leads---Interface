@@ -16,5 +16,10 @@ export class PasswordForgetComponent implements OnInit {
   forgetPasswordForm = new FormGroup({
     email: new FormControl(''),
   })
+  
+  forgetPassword(){
+    console.log(this.forgetPasswordForm.value);
+    
+  }
 
 }
