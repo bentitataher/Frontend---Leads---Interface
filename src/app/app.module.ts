@@ -36,8 +36,9 @@ import { PasswordResetComponent } from './views/leads/authentication/password-re
 // My importations
 import { ReactiveFormsModule } from '@angular/forms'
 import { AuthenticationService } from './authentication.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './token-interceptor.service'
 @NgModule({
   imports: [
     BrowserModule,
@@ -73,7 +74,12 @@ import { AuthGuard } from './auth.guard';
   },
   ToasterService,
   AuthenticationService,
-  AuthGuard
+  AuthGuard,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }
 ],
   bootstrap: [ AppComponent ]
 })
