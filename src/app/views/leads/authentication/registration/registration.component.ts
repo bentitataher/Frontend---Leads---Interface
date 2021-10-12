@@ -9,23 +9,22 @@ import { AuthenticationService } from '../../../../authentication.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private _authenticationService : AuthenticationService) { }
+  constructor(private _authenticationService: AuthenticationService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   inscriptionForm = new FormGroup({
-    nom : new FormControl(''),
-    prenom : new FormControl(''),
-    email : new FormControl(''),
-    password : new FormControl('')
+    nom: new FormControl(''),
+    prenom: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl('')
   });
 
   Inscription() {
     this._authenticationService.inscription(this.inscriptionForm.value)
-        .subscribe((user)=>{
-          console.log(user);
-          
-        })
+      .subscribe((user) => {
+        console.log(user);
+      })
   }
 
 }
