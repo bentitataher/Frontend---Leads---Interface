@@ -21,7 +21,11 @@ export class RegistrationComponent implements OnInit {
   });
 
   Inscription() {
-    console.log(this.inscriptionForm.value);
+    this._authenticationService.inscription(this.inscriptionForm.value)
+        .subscribe((user)=>{
+          console.log(user);
+          
+        })
   }
 
 }
