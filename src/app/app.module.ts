@@ -37,6 +37,7 @@ import { PasswordResetComponent } from './views/leads/authentication/password-re
 import { ReactiveFormsModule } from '@angular/forms'
 import { AuthenticationService } from './authentication.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './auth.guard';
 @NgModule({
   imports: [
     BrowserModule,
@@ -71,7 +72,8 @@ import { HttpClientModule } from '@angular/common/http';
     useClass: HashLocationStrategy,
   },
   ToasterService,
-  AuthenticationService
+  AuthenticationService,
+  AuthGuard
 ],
   bootstrap: [ AppComponent ]
 })
