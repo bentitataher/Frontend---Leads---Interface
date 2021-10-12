@@ -8,9 +8,14 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) { }
 
-  // Inscription
+  //API : Inscription
   inscription(user) {
     return this.http.post("http://localhost:4000/authentication/signup", user)
+  }
+
+  // API : Login
+  login(data){
+    return this.http.post("http://localhost:4000/authentication/login", data)
   }
 
 

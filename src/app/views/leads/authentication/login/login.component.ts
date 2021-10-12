@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToasterService } from 'angular2-toaster';
-import { FormControl, FormGroup } from '@angular/forms'
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthenticationService } from '../../../../authentication.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,15 +8,10 @@ import { FormControl, FormGroup } from '@angular/forms'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private toasterService: ToasterService) { }
+  constructor(private _authenticationService: AuthenticationService) { }
 
-  ngOnInit(): void {
-    this.showSuccess();
-  }
+  ngOnInit(): void {}
 
-  showSuccess() {
-    this.toasterService.pop('success', 'Success Toaster', 'This is toaster description');
-  }
 
   loginForm = new FormGroup({
     email : new FormControl(''),
@@ -24,8 +19,11 @@ export class LoginComponent implements OnInit {
   });
 
   login(){
-    console.log(this.loginForm.value);
-    
+    this._authenticationService.login(this.loginForm.value)
+        .subscribe((data)=>{
+          console.log(data);
+          
+        })
   }
 
  }
