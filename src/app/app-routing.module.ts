@@ -12,6 +12,9 @@ import { LoginComponent } from './views/leads/authentication/login/login.compone
 import { PasswordForgetComponent } from './views/leads/authentication/password-forget/password-forget.component';
 import { PasswordResetComponent } from './views/leads/authentication/password-reset/password-reset.component';
 import { RegistrationComponent } from './views/leads/authentication/registration/registration.component';
+import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component';
+import { GestionComponent } from './views/leads/enregistrement/gestion/gestion.component';
+import { ModificationComponent } from './views/leads/enregistrement/modification/modification.component';
 import { RegisterComponent } from './views/register/register.component';
 
 // Projet leads connect
@@ -64,6 +67,27 @@ export const routes: Routes = [
     component: PasswordResetComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'enregistrement-gestion',
+    component: GestionComponent,
+    data: {
+      title: 'Gestion enregistrement'
+    }
+  },
+  {
+    path: 'enregistrement-ajout',
+    component: AjoutComponent,
+    data: {
+      title: 'Ajout enregistrement'
+    }
+  },
+  {
+    path: 'enregistrement-modification/:id',
+    component: ModificationComponent,
+    data: {
+      title: 'Modification enregistrement'
     }
   },
   {
