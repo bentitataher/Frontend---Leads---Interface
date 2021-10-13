@@ -26,6 +26,11 @@ export class AuthenticationService {
     return localStorage.getItem('token')
   }
 
+  // API : Forget password (envoi du mail)
+  forgetPassword(mail){
+    return this.http.post("http://localhost:4000/authentication/password-forget", mail)
+  }
+
 
 }
 

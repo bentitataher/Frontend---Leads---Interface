@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { AuthenticationService } from '../../../../authentication.service'
 
 @Component({
   selector: 'app-password-forget',
@@ -8,7 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class PasswordForgetComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _authenticationService : AuthenticationService) { }
 
   ngOnInit(): void {
   }
@@ -17,9 +18,12 @@ export class PasswordForgetComponent implements OnInit {
     email: new FormControl(''),
   })
   
-  forgetPassword(){
-    console.log(this.forgetPasswordForm.value);
-    
+  forgetPass(){
+    this._authenticationService.forgetPassword(this.forgetPasswordForm.value)
+        .subscribe((mail)=>{
+          console.log(mail);
+          
+        })
   }
 
 }

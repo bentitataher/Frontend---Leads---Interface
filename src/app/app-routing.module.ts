@@ -10,6 +10,7 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/leads/authentication/login/login.component';
 import { PasswordForgetComponent } from './views/leads/authentication/password-forget/password-forget.component';
+import { PasswordResetComponent } from './views/leads/authentication/password-reset/password-reset.component';
 import { RegistrationComponent } from './views/leads/authentication/registration/registration.component';
 import { RegisterComponent } from './views/register/register.component';
 
@@ -58,7 +59,13 @@ export const routes: Routes = [
     path: 'forget-password',
     component: PasswordForgetComponent
   },
-
+  {
+    path: 'reset-password/:token',
+    component: PasswordResetComponent,
+    data: {
+      title: 'Register Page'
+    }
+  },
   {
     path: '',
     component: DefaultLayoutComponent,
