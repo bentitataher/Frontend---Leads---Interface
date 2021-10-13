@@ -22,7 +22,7 @@ export class PasswordForgetComponent implements OnInit {
     this._authenticationService.forgetPassword(this.forgetPasswordForm.value)
         .subscribe((mail)=>{
           console.log(mail);
-          
+           
         })
   }
 
