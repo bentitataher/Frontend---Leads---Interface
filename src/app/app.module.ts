@@ -39,7 +39,9 @@ import { AuthenticationService } from './authentication.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
-import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component'
+import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component';
+import { GestionComponent } from './views/leads/enregistrement/gestion/gestion.component';
+import { ModificationComponent } from './views/leads/enregistrement/modification/modification.component'
 @NgModule({
   imports: [
     BrowserModule,
@@ -69,6 +71,8 @@ import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.compone
     PasswordForgetComponent,
     PasswordResetComponent,
     AjoutComponent,
+    GestionComponent,
+    ModificationComponent,
   ],
   providers: [{
     provide: LocationStrategy,
