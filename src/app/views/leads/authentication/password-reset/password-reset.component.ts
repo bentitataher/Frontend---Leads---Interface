@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router'
 export class PasswordResetComponent implements OnInit {
 
   constructor(
-    private _authentivationService: AuthenticationService,
+    private _authenticationService: AuthenticationService,
     private route: ActivatedRoute,
   ) { }
 
@@ -23,9 +23,13 @@ export class PasswordResetComponent implements OnInit {
     confirmPassword: new FormControl('')
   })
 
-  reset(){
-    console.log(this.resetPasswordForm.value);
-    
+  reset() {
+    this.resetPasswordForm.value.token = this.route.snapshot.paramMap.get('token');
+    let data = this.resetPasswordForm.value;
+    this._authenticationService.resetPassword(data)
+      .subscribe((reset) => {
+        console.log(reset);
+      })
   }
 
 }

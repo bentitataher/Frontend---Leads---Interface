@@ -38,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { AuthenticationService } from './authentication.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
-import { TokenInterceptorService } from './token-interceptor.service'
+import { TokenInterceptorService } from './token-interceptor.service';
+import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component'
 @NgModule({
   imports: [
     BrowserModule,
@@ -67,6 +68,7 @@ import { TokenInterceptorService } from './token-interceptor.service'
     RegistrationComponent,
     PasswordForgetComponent,
     PasswordResetComponent,
+    AjoutComponent,
   ],
   providers: [{
     provide: LocationStrategy,

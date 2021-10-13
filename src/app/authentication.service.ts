@@ -31,6 +31,10 @@ export class AuthenticationService {
     return this.http.post("http://localhost:4000/authentication/password-forget", mail)
   }
 
+  // API : Reset password (Par Token)
+  resetPassword(data){
+    return this.http.post("http://localhost:4000/authentication/password-reset", data)
+  }
 
 }
 
