@@ -32,9 +32,13 @@ export class AjoutComponent implements OnInit {
     enregistrement: new FormControl('')
   })
 
-  validerEnregistrementForm() {
-    console.log(this.enregistrementForm.value);
+  ajoutEnregistrement() {
+    let data = this.enregistrementForm.value
 
+    this._enregistrementService.ajout(data)
+        .subscribe( (data) =>{
+          console.log(data);
+        })
   }
 
 }

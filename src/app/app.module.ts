@@ -42,6 +42,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component';
 import { GestionComponent } from './views/leads/enregistrement/gestion/gestion.component';
 import { ModificationComponent } from './views/leads/enregistrement/modification/modification.component'
+import { EnregistrementService } from './enregistrement.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -80,6 +81,7 @@ import { ModificationComponent } from './views/leads/enregistrement/modification
   },
   ToasterService,
   AuthenticationService,
+  EnregistrementService,
   AuthGuard,
   {
     provide: HTTP_INTERCEPTORS,
