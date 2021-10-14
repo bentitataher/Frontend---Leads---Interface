@@ -23,6 +23,7 @@ export class AjoutComponent implements OnInit {
     adresse: new FormControl(''),
     codePostal: new FormControl(''),
     codeTVA: new FormControl(''),
+    secteur: new FormControl(''),
     dateEnregistrement: new FormControl(''),
     dateRDV: new FormControl(''),
     telephone: new FormControl(''),

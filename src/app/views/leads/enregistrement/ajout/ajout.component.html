@@ -16,7 +16,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Entreprise</span>
                                 </div>
-                                <input formControlName="entreprise" type="text" id="username3" name="username3" class="form-control">
+                                <input formControlName="entreprise" type="text" id="username3" name="username3"
+                                    class="form-control">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -29,7 +30,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Adresse</span>
                                 </div>
-                                <input formControlName="adresse" type="text" id="username3" name="username3" class="form-control">
+                                <input formControlName="adresse" type="text" id="username3" name="username3"
+                                    class="form-control">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -42,7 +44,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Code postal</span>
                                 </div>
-                                <input formControlName="codePostal" type="text" id="username3" name="username3" class="form-control">
+                                <input formControlName="codePostal" type="text" id="username3" name="username3"
+                                    class="form-control">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -55,20 +58,25 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Code TVA</span>
                                 </div>
-                                <input formControlName="codeTVA" type="text" id="username3" name="username3" class="form-control">
+                                <input formControlName="codeTVA" type="text" id="username3" name="username3"
+                                    class="form-control">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Date Enregistrement -->
+                        <!-- Date Secteur -->
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Date enregistrement</span>
+                                    <span class="input-group-text">Secteur</span>
                                 </div>
-                                <input formControlName="dateEnregistrement" type="text" id="username3" name="username3" class="form-control">
+                                <select formControlName="secteur" id="select1" name="select1" class="form-control">
+                                    <option value="Restauration">Restauration</option>
+                                    <option value="Médical">Médical</option>
+                                    <option value="Commerce">Commerce</option>
+                                </select>
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -79,13 +87,28 @@
 
                     <div class="col-6">
 
+                        <!-- Date Enregistrement -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Date enregistrement</span>
+                                </div>
+                                <input formControlName="dateEnregistrement" class="form-control" id="date-input"
+                                    type="date" name="date-input" placeholder="date">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Date Rendez-vous -->
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Date rendez-vous</span>
                                 </div>
-                                <input formControlName="dateRDV" type="text" id="username3" name="username3" class="form-control">
+                                <input formControlName="dateRDV" class="form-control" id="date-input" type="date"
+                                    name="date-input" placeholder="date">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -98,7 +121,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Téléphone</span>
                                 </div>
-                                <input formControlName="telephone" type="text" id="username3" name="username3" class="form-control">
+                                <input formControlName="telephone" type="text" id="username3" name="username3"
+                                    class="form-control">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -111,7 +135,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Contact prospect</span>
                                 </div>
-                                <input formControlName="contactProspect" type="text" id="username3" name="username3" class="form-control">
+                                <input formControlName="contactProspect" type="text" id="username3" name="username3"
+                                    class="form-control">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -124,7 +149,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Enregistrement</span>
                                 </div>
-                                <input formControlName="enregistrement" type="file" id="username3" name="username3" class="form-control">
+                                <input formControlName="enregistrement" type="file" id="username3" name="username3"
+                                    class="form-control">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -141,8 +167,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Commentaire</span>
                                 </div>
-                                <textarea formControlName="commentaire" id="textarea-input" name="textarea-input" rows="3" class="form-control"
-                                    placeholder="Ajouter un commentaire"></textarea>
+                                <textarea formControlName="commentaire" id="textarea-input" name="textarea-input"
+                                    rows="3" class="form-control" placeholder="Ajouter un commentaire"></textarea>
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
@@ -152,7 +178,8 @@
                     </div>
 
                     <div class="form-group form-actions">
-                        <button type="button" class="btn btn-sm btn-primary ml-3" (click)="validerEnregistrementForm()">Valider</button>
+                        <button type="button" class="btn btn-sm btn-primary ml-3"
+                            (click)="validerEnregistrementForm()">Valider</button>
                     </div>
 
                 </div>
