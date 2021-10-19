@@ -18,7 +18,12 @@ export class AjoutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    this._secteurService.getAllSecteur()
+    .subscribe((secteur) =>{
+      this.secteur = secteur
+      console.log(this.secteur);
+      
+    })
   }
 
   secteur :any;

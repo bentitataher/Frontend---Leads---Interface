@@ -73,9 +73,7 @@
                                     <span class="input-group-text">Secteur</span>
                                 </div>
                                 <select formControlName="secteur" id="select1" name="select1" class="form-control">
-                                    <option value="Restauration">Restauration</option>
-                                    <option value="Médical">Médical</option>
-                                    <option value="Commerce">Commerce</option>
+                                    <option *ngFor="let secteur of secteur">{{secteur.secteur}}</option>
                                 </select>
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>

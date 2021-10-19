@@ -53,6 +53,7 @@ import { AjoutSecteurComponent } from './views/leads/secteur/ajout-secteur/ajout
 import { GestionSecteurComponent } from './views/leads/secteur/gestion-secteur/gestion-secteur.component';
 import { ModificationSecteurComponent } from './views/leads/secteur/modification-secteur/modification-secteur.component';
 import { SecteurService } from './secteur.service';
+import { GestionUserComponent } from './views/leads/gestion-users/gestion-user/gestion-user.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -86,7 +87,8 @@ import { SecteurService } from './secteur.service';
     ModificationComponent,
     AjoutSecteurComponent,
     GestionSecteurComponent,
-    ModificationSecteurComponent
+    ModificationSecteurComponent,
+    GestionUserComponent
   ],
   providers: [{
     provide: LocationStrategy,
