@@ -149,8 +149,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Enregistrement</span>
                                 </div>
-                                <input formControlName="enregistrement" type="file" id="username3" name="username3"
-                                    class="form-control">
+                                <input type="file" id="username3" name="username3"
+                                    class="form-control" (change)="onFileSelect($event)">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>

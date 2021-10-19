@@ -18,6 +18,13 @@ export class AjoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logoUpload: File;
+
+  onFileSelect(event) {
+    this.logoUpload = event.target.files[0];
+    console.log("check point ==> : ", this.logoUpload);
+  }
+
   enregistrementForm = new FormGroup({
     entreprise: new FormControl(''),
     adresse: new FormControl(''),
@@ -29,16 +36,25 @@ export class AjoutComponent implements OnInit {
     telephone: new FormControl(''),
     commentaire: new FormControl(''),
     contactProspect: new FormControl(''),
-    enregistrement: new FormControl('')
   })
 
   ajoutEnregistrement() {
+
     let data = this.enregistrementForm.value
 
-    this._enregistrementService.ajout(data)
-        .subscribe( (data) =>{
-          console.log(data);
-        })
+    const formData = new FormData();
+    Object.keys(data).forEach((key) => {
+      formData.append(key, data[key])
+    });
+
+    formData.append('image', this.logoUpload, this.logoUpload.name);
+
+    this._enregistrementService.ajout(formData)
+      .subscribe((data) => {
+        console.log("From API post with multer", data);
+      })
+
+
   }
 
 }
