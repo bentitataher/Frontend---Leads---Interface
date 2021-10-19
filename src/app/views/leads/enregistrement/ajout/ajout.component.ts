@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { EnregistrementService } from '../../../../enregistrement.service'
+import { SecteurService } from '../../../../secteur.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,12 +13,15 @@ export class AjoutComponent implements OnInit {
 
   constructor(
     private _enregistrementService: EnregistrementService,
+    private _secteurService: SecteurService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    
   }
 
+  secteur :any;
   logoUpload: File;
 
   onFileSelect(event) {

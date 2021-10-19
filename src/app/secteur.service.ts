@@ -10,10 +10,17 @@ export class SecteurService {
     private http: HttpClient
   ) { }
 
-// Ajouter un secteur
-ajout(data){
-  return this.http.post("http://localhost:4000/secteur", data)
-}
+
+  // Get tous secteurs
+  getAllSecteur() {
+    return this.http.get("http://localhost:4000/secteur")
+  }
+
+
+  // Ajouter un secteur
+  ajout(data) {
+    return this.http.post("http://localhost:4000/secteur", data)
+  }
 
 
 
