@@ -15,14 +15,17 @@ export class AjoutSecteurComponent implements OnInit {
   }
 
   ajoutSecteurForm = new FormGroup({
-    descriptionSecteur: new FormControl(''),
+    description: new FormControl(''),
     secteur: new FormControl(''),
   })
 
   ajoutSecteur() {
     let data = this.ajoutSecteurForm.value;
-    console.log(data);
-    
+    this._secteurService.ajout(data)
+      .subscribe((data) => {
+        console.log(data);
+      })
+    this.ajoutSecteurForm.reset();
   }
 
 }
