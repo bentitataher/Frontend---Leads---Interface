@@ -15,6 +15,7 @@ import { RegistrationComponent } from './views/leads/authentication/registration
 import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component';
 import { GestionComponent } from './views/leads/enregistrement/gestion/gestion.component';
 import { ModificationComponent } from './views/leads/enregistrement/modification/modification.component';
+import { GestionUserComponent } from './views/leads/gestion-users/gestion-user/gestion-user.component';
 import { AjoutSecteurComponent } from './views/leads/secteur/ajout-secteur/ajout-secteur.component';
 import { GestionSecteurComponent } from './views/leads/secteur/gestion-secteur/gestion-secteur.component';
 import { ModificationSecteurComponent } from './views/leads/secteur/modification-secteur/modification-secteur.component';
@@ -114,6 +115,14 @@ export const routes: Routes = [
     component: ModificationSecteurComponent,
     data: {
       title: 'Modification secteur'
+    }
+  },
+  // Gestion users routing
+  {
+    path: 'gestion-users',
+    component: GestionUserComponent,
+    data: {
+      title: 'Gérer les utilisateurs'
     }
   },
   {
