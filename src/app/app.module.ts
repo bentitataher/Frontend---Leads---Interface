@@ -52,6 +52,7 @@ import { EnregistrementService } from './enregistrement.service';
 import { AjoutSecteurComponent } from './views/leads/secteur/ajout-secteur/ajout-secteur.component';
 import { GestionSecteurComponent } from './views/leads/secteur/gestion-secteur/gestion-secteur.component';
 import { ModificationSecteurComponent } from './views/leads/secteur/modification-secteur/modification-secteur.component';
+import { SecteurService } from './secteur.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -94,6 +95,7 @@ import { ModificationSecteurComponent } from './views/leads/secteur/modification
   ToasterService,
   AuthenticationService,
   EnregistrementService,
+  SecteurService,
   AuthGuard,
   {
     provide: HTTP_INTERCEPTORS,
