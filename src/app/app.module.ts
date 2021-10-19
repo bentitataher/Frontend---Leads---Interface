@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
+
+// Authentication
 import { LoginComponent } from './views/leads/authentication/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
@@ -39,10 +41,17 @@ import { AuthenticationService } from './authentication.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+
+// Enregistrement
 import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component';
 import { GestionComponent } from './views/leads/enregistrement/gestion/gestion.component';
 import { ModificationComponent } from './views/leads/enregistrement/modification/modification.component'
 import { EnregistrementService } from './enregistrement.service';
+
+// Secteur
+import { AjoutSecteurComponent } from './views/leads/secteur/ajout-secteur/ajout-secteur.component';
+import { GestionSecteurComponent } from './views/leads/secteur/gestion-secteur/gestion-secteur.component';
+import { ModificationSecteurComponent } from './views/leads/secteur/modification-secteur/modification-secteur.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -59,7 +68,7 @@ import { EnregistrementService } from './enregistrement.service';
     ChartsModule,
     ToasterModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
@@ -74,6 +83,9 @@ import { EnregistrementService } from './enregistrement.service';
     AjoutComponent,
     GestionComponent,
     ModificationComponent,
+    AjoutSecteurComponent,
+    GestionSecteurComponent,
+    ModificationSecteurComponent
   ],
   providers: [{
     provide: LocationStrategy,

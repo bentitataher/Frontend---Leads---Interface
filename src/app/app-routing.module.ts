@@ -15,6 +15,9 @@ import { RegistrationComponent } from './views/leads/authentication/registration
 import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component';
 import { GestionComponent } from './views/leads/enregistrement/gestion/gestion.component';
 import { ModificationComponent } from './views/leads/enregistrement/modification/modification.component';
+import { AjoutSecteurComponent } from './views/leads/secteur/ajout-secteur/ajout-secteur.component';
+import { GestionSecteurComponent } from './views/leads/secteur/gestion-secteur/gestion-secteur.component';
+import { ModificationSecteurComponent } from './views/leads/secteur/modification-secteur/modification-secteur.component';
 import { RegisterComponent } from './views/register/register.component';
 
 // Projet leads connect
@@ -69,6 +72,7 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
+  // Enregistrement routing
   {
     path: 'enregistrement-gestion',
     component: GestionComponent,
@@ -88,6 +92,28 @@ export const routes: Routes = [
     component: ModificationComponent,
     data: {
       title: 'Modification enregistrement'
+    }
+  },
+  // Secteur routing
+  {
+    path: 'secteur-ajout',
+    component: AjoutSecteurComponent,
+    data: {
+      title: 'Ajout secteur'
+    }
+  },
+  {
+    path: 'secteur-gestion',
+    component: GestionSecteurComponent,
+    data: {
+      title: 'Gestion secteur'
+    }
+  },
+  {
+    path: 'secteur-modification/:id',
+    component: ModificationSecteurComponent,
+    data: {
+      title: 'Modification secteur'
     }
   },
   {
