@@ -16,60 +16,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Vishnu Serghei</td>
-                        <td>2012/01/01</td>
-                        <td>Member</td>
+                    <tr *ngFor="let user of users; let i = index">
+                        <td>{{user.nom}}</td>
+                        <td>{{user.prenom}}</td>
+                        <td>{{user.role}}</td>
                         <td>
-                            <span class="badge badge-success">Active</span>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-primary px-4">Editer</button>
-                            <button type="button" class="btn btn-danger px-4">Supprimer</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Zbyněk Phoibos</td>
-                        <td>2012/02/01</td>
-                        <td>Staff</td>
-                        <td>
-                            <span class="badge badge-danger">Banned</span>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-primary px-4">Editer</button>
-                            <button type="button" class="btn btn-danger px-4">Supprimer</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Einar Randall</td>
-                        <td>2012/02/01</td>
-                        <td>Admin</td>
-                        <td>
-                            <span class="badge badge-secondary">Inactive</span>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-primary px-4">Editer</button>
-                            <button type="button" class="btn btn-danger px-4">Supprimer</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Félix Troels</td>
-                        <td>2012/03/01</td>
-                        <td>Member</td>
-                        <td>
-                            <span class="badge badge-warning">Pending</span>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-primary px-4">Editer</button>
-                            <button type="button" class="btn btn-danger px-4">Supprimer</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Aulus Agmundr</td>
-                        <td>2012/01/21</td>
-                        <td>Staff</td>
-                        <td>
-                            <span class="badge badge-success">Active</span>
+                            <span class="badge badge-success">{{user.statut}}</span>
                         </td>
                         <td>
                             <button type="button" class="btn btn-primary px-4">Editer</button>

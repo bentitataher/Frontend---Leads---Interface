@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GestionUsersService } from '../../../../gestion-users.service'
 
 @Component({
   selector: 'app-gestion-user',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _gestionUserService: GestionUsersService
+  ) { }
+
+  users: any;
 
   ngOnInit(): void {
+    this._gestionUserService.getAllUsers()
+      .subscribe((user) => {
+        this.users = user
+        console.log("from Api ==> ", this.users);
+      })
   }
 
 }
