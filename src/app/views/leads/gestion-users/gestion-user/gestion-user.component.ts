@@ -11,7 +11,7 @@ export class GestionUserComponent implements OnInit {
 
   constructor(
     private _gestionUserService: GestionUsersService,
-    private router : Router
+    private router: Router
   ) { }
 
   users: any;
@@ -24,7 +24,7 @@ export class GestionUserComponent implements OnInit {
       })
   }
 
-  versAjouter(){
+  versAjouter() {
     this.router.navigate(['ajout-user'])
   }
 

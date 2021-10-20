@@ -1,1 +1,100 @@
-<p>ajout-user works!</p>
+<div class="app-body mt-5">
+    <main class="main d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 mx-auto">
+                    <div class="card mx-4">
+                        <div class="card-body p-4">
+                            <form [formGroup]="inscriptionForm">
+                                <h1>Ajouter un utilisateur</h1>
+                                <p class="text-muted">Ajouter un utilisateur</p>
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <!-- Début Nom -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="icon-user"></i></span>
+                                            </div>
+                                            <input formControlName="nom" type="text" class="form-control"
+                                                placeholder="Nom" autocomplete="username" required>
+                                        </div>
+
+
+                                        <!-- Début Prenom -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="icon-user"></i></span>
+                                            </div>
+                                            <input formControlName="prenom" type="text" class="form-control"
+                                                placeholder="Prenom" autocomplete="username" required>
+                                        </div>
+
+                                        <!-- Début Email -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">@</span>
+                                            </div>
+                                            <input formControlName="email" type="text" class="form-control"
+                                                placeholder="Email" autocomplete="email" required>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <!-- Début rôle-->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">@</span>
+                                            </div>
+                                            <select id="select1" name="select1" class="form-control">
+                                                <option value="nouveau compte">Nouveau compte</option>
+                                                <option value="ndministrateur">Administrateur</option>
+                                                <option value="operateur">Operateur</option>
+                                                <option value="client">Client</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Début statut-->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">@</span>
+                                            </div>
+                                            <select id="select2" name="select1" class="form-control">
+                                                <option value="nouveau compte">Inactif</option>
+                                                <option value="ndministrateur">Actif</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Début Mot de passe -->
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="icon-lock"></i></span>
+                                            </div>
+                                            <input formControlName="password" type="password" class="form-control"
+                                                placeholder="mot de passe" autocomplete="new-password" required>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <!-- Bouton validation -->
+                                        <button type="button" class="btn btn-block btn-success"
+                                            (click)="Inscription()">Envoyer</button>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+                            {{inscriptionForm.value | json}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
