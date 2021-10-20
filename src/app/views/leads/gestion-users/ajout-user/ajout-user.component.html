@@ -5,7 +5,7 @@
                 <div class="col-md-9 mx-auto">
                     <div class="card mx-4">
                         <div class="card-body p-4">
-                            <form [formGroup]="inscriptionForm">
+                            <form [formGroup]="ajoutUserForm">
                                 <h1>Ajouter un utilisateur</h1>
                                 <p class="text-muted">Ajouter un utilisateur</p>
 
@@ -49,9 +49,8 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">@</span>
                                             </div>
-                                            <select id="select1" name="select1" class="form-control">
-                                                <option value="nouveau compte">Nouveau compte</option>
-                                                <option value="ndministrateur">Administrateur</option>
+                                            <select formControlName="role" id="select1" name="select1" class="form-control">
+                                                <option value="administrateur">Administrateur</option>
                                                 <option value="operateur">Operateur</option>
                                                 <option value="client">Client</option>
                                             </select>
@@ -62,9 +61,9 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">@</span>
                                             </div>
-                                            <select id="select2" name="select1" class="form-control">
-                                                <option value="nouveau compte">Inactif</option>
-                                                <option value="ndministrateur">Actif</option>
+                                            <select formControlName="statut" id="select2" name="select1" class="form-control">
+                                                <option value="inactif">Inactif</option>
+                                                <option value="actif">Actif</option>
                                             </select>
                                         </div>
 
@@ -83,14 +82,14 @@
 
                                         <!-- Bouton validation -->
                                         <button type="button" class="btn btn-block btn-success"
-                                            (click)="Inscription()">Envoyer</button>
+                                            (click)="valider()">Envoyer</button>
 
                                     </div>
 
                                 </div>
 
                             </form>
-                            {{inscriptionForm.value | json}}
+                            {{ajoutUserForm.value | json}}
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { GestionUsersService } from '../../../../gestion-users.service';
 
 @Component({
   selector: 'app-ajout-user',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjoutUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _gestionUserService: GestionUsersService
+  ) { }
+
+  ajoutUserForm = new FormGroup({
+    nom: new FormControl(''),
+    prenom: new FormControl(''),
+    email: new FormControl(''),
+    role: new FormControl(''),
+    statut: new FormControl(''),
+    password: new FormControl('')
+  })
 
   ngOnInit(): void {
+  }
+
+  valider(){
+    console.log(this.ajoutUserForm.value);
+    
   }
 
 }
