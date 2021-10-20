@@ -24,4 +24,8 @@ export class GestionUserComponent implements OnInit {
       })
   }
 
+  versAjouter(){
+    this.router.navigate(['ajout-user'])
+  }
+
 }
