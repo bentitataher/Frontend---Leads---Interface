@@ -53,7 +53,13 @@ import { AjoutSecteurComponent } from './views/leads/secteur/ajout-secteur/ajout
 import { GestionSecteurComponent } from './views/leads/secteur/gestion-secteur/gestion-secteur.component';
 import { ModificationSecteurComponent } from './views/leads/secteur/modification-secteur/modification-secteur.component';
 import { SecteurService } from './secteur.service';
+
+// Gestion users
 import { GestionUserComponent } from './views/leads/gestion-users/gestion-user/gestion-user.component';
+import { AjoutUserComponent } from './views/leads/gestion-users/ajout-user/ajout-user.component';
+import { ModificationUserComponent } from './views/leads/gestion-users/modification-user/modification-user.component';
+import { GestionUsersService } from './gestion-users.service';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -88,7 +94,9 @@ import { GestionUserComponent } from './views/leads/gestion-users/gestion-user/g
     AjoutSecteurComponent,
     GestionSecteurComponent,
     ModificationSecteurComponent,
-    GestionUserComponent
+    GestionUserComponent,
+    AjoutUserComponent,
+    ModificationUserComponent
   ],
   providers: [{
     provide: LocationStrategy,
@@ -98,6 +106,7 @@ import { GestionUserComponent } from './views/leads/gestion-users/gestion-user/g
   AuthenticationService,
   EnregistrementService,
   SecteurService,
+  GestionUsersService,
   AuthGuard,
   {
     provide: HTTP_INTERCEPTORS,
