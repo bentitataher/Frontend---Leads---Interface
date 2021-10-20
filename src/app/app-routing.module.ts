@@ -15,7 +15,9 @@ import { RegistrationComponent } from './views/leads/authentication/registration
 import { AjoutComponent } from './views/leads/enregistrement/ajout/ajout.component';
 import { GestionComponent } from './views/leads/enregistrement/gestion/gestion.component';
 import { ModificationComponent } from './views/leads/enregistrement/modification/modification.component';
+import { AjoutUserComponent } from './views/leads/gestion-users/ajout-user/ajout-user.component';
 import { GestionUserComponent } from './views/leads/gestion-users/gestion-user/gestion-user.component';
+import { ModificationUserComponent } from './views/leads/gestion-users/modification-user/modification-user.component';
 import { AjoutSecteurComponent } from './views/leads/secteur/ajout-secteur/ajout-secteur.component';
 import { GestionSecteurComponent } from './views/leads/secteur/gestion-secteur/gestion-secteur.component';
 import { ModificationSecteurComponent } from './views/leads/secteur/modification-secteur/modification-secteur.component';
@@ -123,6 +125,20 @@ export const routes: Routes = [
     component: GestionUserComponent,
     data: {
       title: 'Gérer les utilisateurs'
+    }
+  },
+  {
+    path: 'ajout-user',
+    component: AjoutUserComponent,
+    data: {
+      title: 'Ajouter utilisateur'
+    }
+  },
+  {
+    path: 'modification-user/:id',
+    component: ModificationUserComponent,
+    data: {
+      title: 'Ajouter utilisateur'
     }
   },
   {

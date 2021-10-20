@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GestionUsersService } from '../../../../gestion-users.service'
+import { GestionUsersService } from '../../../../gestion-users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestion-user',
@@ -9,7 +10,8 @@ import { GestionUsersService } from '../../../../gestion-users.service'
 export class GestionUserComponent implements OnInit {
 
   constructor(
-    private _gestionUserService: GestionUsersService
+    private _gestionUserService: GestionUsersService,
+    private router : Router
   ) { }
 
   users: any;
