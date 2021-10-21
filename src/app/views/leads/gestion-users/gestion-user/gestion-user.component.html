@@ -24,8 +24,8 @@
                             <span class="badge badge-success">{{user.statut}}</span>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary px-4">Editer</button>
-                            <button type="button" class="btn btn-danger px-4">Supprimer</button>
+                            <button type="button" class="btn btn-primary px-4" (click)="edit(i)">Editer</button>
+                            <button type="button" class="btn btn-danger px-4" (click)="delete(i)">Supprimer</button>
                         </td>
                     </tr>
                 </tbody>

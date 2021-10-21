@@ -28,4 +28,8 @@ export class GestionUserComponent implements OnInit {
     this.router.navigate(['ajout-user'])
   }
 
+  edit(i){
+    this.router.navigate(['/modification-user', this.users[i]._id])
+  }
+
 }
