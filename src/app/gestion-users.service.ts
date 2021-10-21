@@ -16,4 +16,9 @@ export class GestionUsersService {
     return this.http.get("http://localhost:4000/gestion-users")
   }
 
+  // Ajout utilisateur
+  ajoutUserAdmin(newUser){
+    return this.http.post("http://localhost:4000/gestion-users/signup",newUser)
+  }
+
 }

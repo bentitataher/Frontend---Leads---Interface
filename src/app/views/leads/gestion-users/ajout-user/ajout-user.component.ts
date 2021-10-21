@@ -25,9 +25,12 @@ export class AjoutUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  valider(){
-    console.log(this.ajoutUserForm.value);
-    
+  valider() {
+    let data = this.ajoutUserForm.value;
+    this._gestionUserService.ajoutUserAdmin(data)
+      .subscribe((user) => {
+        console.log(user);
+      })
   }
 
 }
