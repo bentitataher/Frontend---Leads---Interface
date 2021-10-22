@@ -25,4 +25,9 @@ export class GestionUsersService {
     return this.http.post("http://localhost:4000/gestion-users/signup", newUser)
   }
 
+   // Supprimer secteur
+   deleteUser(id){
+    return this.http.delete("http://localhost:4000/gestion-users/"+ id)
+  }
+
 }

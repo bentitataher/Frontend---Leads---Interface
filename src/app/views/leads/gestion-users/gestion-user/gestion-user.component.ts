@@ -32,4 +32,12 @@ export class GestionUserComponent implements OnInit {
     this.router.navigate(['/modification-user', this.users[i]._id])
   }
 
+  delete(i){
+    this._gestionUserService.deleteUser(this.users[i]._id)
+    .subscribe((userDeleted)=>{
+      console.log(userDeleted);
+      this.ngOnInit();
+    })
+  }
+
 }
