@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { GestionUsersService } from '../../../../gestion-users.service';
 
 @Component({
   selector: 'app-modification-user',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModificationUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _gestionUserService: GestionUsersService,
+    private route: ActivatedRoute,
+  ) { }
+
+  modificationUserForm = new FormGroup({
+    nom: new FormControl(''),
+    prenom: new FormControl(''),
+    email: new FormControl(''),
+    role: new FormControl(''),
+    statut: new FormControl(''),
+    password: new FormControl('')
+  })
 
   ngOnInit(): void {
+    let id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
+    
   }
 
 }

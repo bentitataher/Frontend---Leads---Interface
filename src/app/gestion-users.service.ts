@@ -15,10 +15,14 @@ export class GestionUsersService {
   getAllUsers() {
     return this.http.get("http://localhost:4000/gestion-users")
   }
+  // Get One user
+  getOneUser(id) {
+    return this.http.get("http://localhost:4000/gestion-users/" + id)
+  }
 
   // Ajout utilisateur
-  ajoutUserAdmin(newUser){
-    return this.http.post("http://localhost:4000/gestion-users/signup",newUser)
+  ajoutUserAdmin(newUser) {
+    return this.http.post("http://localhost:4000/gestion-users/signup", newUser)
   }
 
 }
