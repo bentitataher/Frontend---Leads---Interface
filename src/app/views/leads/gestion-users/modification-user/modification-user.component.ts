@@ -33,5 +33,15 @@ export class ModificationUserComponent implements OnInit {
       })
   }
 
+  valider() {
+    let id = this.route.snapshot.paramMap.get('id');
+    let data = this.modificationUserForm.value;
+
+    this._gestionUserService.editUser(id, data)
+      .subscribe((userUpdated) => {
+        console.log(userUpdated);
+      })
+  }
+
 
 }
