@@ -26,8 +26,11 @@ export class ModificationUserComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    
+    this._gestionUserService.getOneUser(id)
+      .subscribe((userGetted) => {
+        this.modificationUserForm.patchValue(userGetted);
+        console.log(userGetted);
+      })
   }
 
 }
